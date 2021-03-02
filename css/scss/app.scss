@@ -1,0 +1,640 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+@import 'normalize';
+@import 'susy';
+@import 'breakpoint';
+@import 'variables';
+@import 'mixins';
+@import 'grid';
+
+* {
+	@include border-box-sizing;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: $dark-grey;
+	font-size: $base-fosz;
+	line-height: 1.25;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $link-color;
+	&:hover {
+		color: darken($link-color, 10);
+	}
+}
+
+.cta {
+	&-wrapper {
+		margin: 35px 0 0;
+		text-align: center;
+		width: 100%;
+		@include breakpoint($breakpoint-lg) {
+			margin-top: 70px;
+		}
+	}
+	&-button {
+		display: inline-block;
+		vertical-align: top;
+		line-height: $cta-button-height;
+		width: auto;
+		padding: 0 35px;
+		text-align: center;
+		font-size: ($base-fosz - 2);
+		font-weight: 300;
+		text-transform: uppercase;
+		background-color: $base-yellow;
+		@include stripes();
+		text-decoration: none;
+		color: $dark-grey;
+		box-shadow: 0 5px 15px -3px lighten(black, 70);
+		@include breakpoint($breakpoint-lg) {
+			padding: 0 30px;
+			font-size: $base-fosz;
+		}
+		&:hover {
+			box-shadow: 0 5px 15px -5px lighten(black, 70);
+			color: $dark-grey;
+		}
+		&:active {
+			box-shadow: 0 5px 15px -7px lighten(black, 70);
+		}
+	}
+}
+
+.white-bg {
+	background-image: url(../img/crossword.png);
+	background-repeat: repeat;
+}
+.grey-bg {
+	background-image: url(../img/fabric_plaid.png);
+	background-repeat: repeat;
+}
+
+.section {
+  width: 100%;
+  &-inner {
+  }
+  &-title {
+  	text-align: center;
+  	font-size: $fosz-40;
+  	font-weight: 100;
+  	margin-bottom: $section-title-mbot;
+  	@include breakpoint($breakpoint-lg) {
+	  	font-size: $fosz-48;
+	  	margin-bottom: $section-title-mbot-lg;
+  	}
+  	span {
+	  	display: inline-block;
+	  	vertical-align: top;
+	  	width: auto;
+	  	&:after {
+	  		content: '';
+	  		display: block;
+	  		width: 100%;
+	  		height: 4px;
+	  		margin-top: 1px;
+	  		background-color: $base-yellow;
+	  		@include stripes(.5);
+	  	}
+  	}
+  }
+  &__content {
+    .section-inner {
+    	padding: $section-padding 0;
+    	@include breakpoint($breakpoint-lg) {
+	    	padding: $section-padding-lg 0;
+    	}
+    }
+  }
+}
+
+.main-header,
+.main-footer {
+	position: relative;
+	z-index: 2;
+	font-size: $fosz-25;
+	font-weight: 400;
+	background-color: $main-header-bgc;
+	height: $header-height;
+	@include breakpoint($breakpoint-lg) {
+		height: $header-height-lg;
+	}
+	&--logo {
+		a {
+			display: inline-block;
+			vertical-align: top;
+			text-decoration: none;
+		}
+		.logo {
+			&-image,
+			&-text {
+				display: inline-block;
+				vertical-align: top;
+			}
+			&-image {
+				width: $main-logo-height;
+				height: $main-logo-height;
+				background-color: $base-yellow;
+				@include breakpoint($breakpoint-lg) {
+				  width: $main-logo-height-lg;
+  				height: $main-logo-height-lg;
+				}
+			}
+			&-text {
+				font-size: $fosz-20;
+				color: white;
+				padding-top: 5px;
+				margin-left: 15px;
+				@include breakpoint($breakpoint-lg) {
+				  font-size: inherit;
+				}
+				small {
+					display: block;
+					font-size: .72em;
+					font-weight: 100;
+				}
+			}
+		}
+	}
+	&--phones {
+		font-size: $fosz-20;
+		color: $base-yellow;
+		font-weight: 300;
+		text-align: center;
+		@include breakpoint($breakpoint-sm) {
+			text-align: right;
+		}
+		@include breakpoint($breakpoint-lg) {
+			font-size: inherit;
+		}
+		.phone-item {
+			display: inline-block;
+			vertical-align: baseline;
+			line-height: 1.9;
+			@include breakpoint($breakpoint-md) {
+				line-height: $header-height;
+			}
+			&:not(:first-of-type) {
+				margin-left: 15px;
+				@include breakpoint($breakpoint-lg) {
+					margin-left: 35px;
+				}
+			}
+			.svg-wrapper {
+				display: none;
+				vertical-align: top;
+				position: relative;
+				top: 6px;
+				left: 10px;
+				width: 27px;
+				height: 27px;
+				opacity: .2;
+				@include breakpoint($breakpoint-sm) {
+					display: inline-block;
+				}
+				@include breakpoint($breakpoint-lg) {
+					top: 12px;
+					width: 40px;
+					height: 40px;
+				}
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.main-footer {
+	overflow-y: hidden;
+	height: $header-height-lg;
+	@include breakpoint($breakpoint-lg) {
+		height: $footer-height;
+	}
+	.logo {
+		&-text {
+			position: relative;
+			margin-left: 10px;
+		}
+		&-image {
+			width: $header-height-lg;
+			height: $header-height-lg;
+			@include breakpoint($breakpoint-lg) {
+			  width: $footer-height;
+				height: $footer-height;
+			}
+		}
+	}
+	&--phones {
+		display: none;
+		@include breakpoint($breakpoint-md) {
+			display: block;
+		}
+		.phone-item {
+			line-height: $header-height-lg;
+			@include breakpoint($breakpoint-lg) {
+				line-height: $footer-height;
+			}
+		}
+	}
+	.copyright {
+		position: absolute;
+		left: 0; bottom: -20px;
+		display: block;
+		font-size: .6em;
+		font-weight: 100;
+		color: rgba(255, 255, 255, .5);
+		@include breakpoint($breakpoint-lg) {
+			bottom: -35px;
+		}
+	}
+}
+
+.hero {
+	position: relative;
+	background-color: $hero-bgc;
+	background-image: url(../img/hero-image_tr.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	padding: 20vh 0 24vh;
+	z-index: 1;
+	&-title {
+		display: block;
+		width: 95%;
+		margin: auto;
+		text-align: center;
+		color: white;
+		font-size: $fosz-30;
+		font-weight: 100;
+		@include text-shadow-dark;
+		@include breakpoint($breakpoint-lg) {
+			width: 80%;
+			font-size: $fosz-40;
+		}
+	}
+	&-userscounter {
+		@include h-align;
+		@include text-shadow-dark;
+		bottom: 20px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: $base-fosz;
+		font-weight: 300;
+		color: white;
+		@include breakpoint($breakpoint-lg) {
+			font-size: $fosz-25;
+		}
+	}
+}
+
+.order {
+	padding: 35px 0;
+	background-color: $base-yellow;
+	text-align: center;
+	color: $dark-grey;
+	@include stripes();
+	&-title {
+		font-size: $fosz-20;
+		font-weight: 300;
+		@include text-shadow-white;
+		@include breakpoint($breakpoint-lg) {
+			font-size: $fosz-25;
+		}
+	}
+	&-form {
+		text-align: center;
+		padding: 15px 0 25px;
+	}
+	a {
+		color: $link-color;
+		&:hover {
+			color: lighten($link-color, 5);
+		}
+	}
+}
+
+.form {
+	&-input {
+		height: $input-height;
+		font-size: $fosz-20;
+		font-weight: 100;
+		padding: 0 15px;
+		border: 1px solid darken($base-yellow, 15);
+		box-shadow: inset 0 0 10px lighten(black, 70);
+		&:not(:first-of-type) {
+			margin-top: 5px;
+			@include breakpoint($breakpoint-md) {
+				margin-top: 0;
+			}
+		}
+		&[type="text"]:focus {
+			border-color: $base-blue;
+			box-shadow: inset 0 0 10px lighten($base-blue, 10);
+		}
+	}
+}
+.order-form--submit {
+	box-shadow: none;
+	background-color: $base-red;
+	border-color: darken($base-red, 5);
+	color: white;
+	font-weight: 200;
+	cursor: pointer;
+	box-shadow: 0 2px 10px -4px lighten(black, 0);
+	&:hover {
+		box-shadow: 0 2px 10px -5px lighten(black, 0);
+	}
+	&:active {
+		box-shadow: 0 2px 10px -7px lighten(black, 0);
+		border-color: darken($base-red, 5);
+	}
+}
+
+.services {
+  &-item {
+  	position: relative;
+  	// padding-left: span(1);
+  	padding-left: ($services-icon-size + 20);
+  	&:not(:first-of-type) {
+  		margin-top: 30px;
+  	}
+  	@include breakpoint($breakpoint-lg) {
+  		padding-left: ($services-icon-size-lg + 40);
+  	}
+  	&--icon,
+  	&--text {
+  		display: inline-block;
+  		vertical-align: middle;
+  	}
+    &--icon {
+    	position: absolute;
+    	top: -10px; left: 15px;
+      width: $services-icon-size;
+      height: $services-icon-size;
+      @include breakpoint($breakpoint-md) {
+      	top: -10px; left: 15px;
+      }
+      @include breakpoint($breakpoint-lg) {
+      	top: -15px; left: 20px;
+      	width: $services-icon-size-lg;
+      	height: $services-icon-size-lg;
+      }
+      svg {
+      	width: 100%;
+      	height: 100%;
+      }
+    }
+    &--text {
+    	font-size: $fosz-20;
+    	font-weight: 300;
+    	@include breakpoint($breakpoint-lg) {
+	    	font-size: $fosz-30;
+    	}
+    	// margin-left: gutter();
+    }
+  }
+}
+
+.park {
+  &-item {
+  	text-align: center;
+  	margin-top: 50px;
+  	@include breakpoint($breakpoint-lg) {
+  		margin-top: 0;
+  	}
+  	&--image,
+  	&--text {
+  	}
+    &--image {
+    	max-width: 100%;
+    	height: auto;
+    	img {
+    		max-width: 100%;
+    		height: auto;
+    	}
+    }
+    &--text {
+    	font-size: $fosz-20;
+    	font-weight: 300;
+    	@include breakpoint($breakpoint-lg) {
+	    	font-size: $fosz-30;
+    	}
+    }
+  }
+}
+
+.advantages {
+  &-item {
+  	text-align: center;
+  	&:not(:first-of-type) {
+  		margin-top: 50px;
+  		@include breakpoint($breakpoint-md) {
+  			margin-top: 0;
+  		}
+  	}
+  	&--icon,
+  	&--text {
+  	}
+    &--icon {
+    	height: 100px;
+    	width: 100px;
+    	margin: 0 auto -5px;
+    	@include breakpoint($breakpoint-lg) {
+    		height: 150px;
+    		width: 150px;
+    		margin-bottom: 25px;
+    	}
+    	svg {
+    		width: 100%;
+    		height: 100%;
+    	}
+    }
+    &--text {
+    	font-size: $fosz-20;
+    	font-weight: 300;
+    	padding: 0 (gutter() * 5);
+    	strong {
+    		display: block;
+    		font-size: $fosz-20;
+    		font-weight: 500;
+    		margin-top: 20px;
+    		@include breakpoint($breakpoint-lg) {
+	    		font-size: $fosz-25;
+    		}
+    	}
+    }
+  }
+}
+
+.contacts {
+	&-wrapper {
+		padding-left: span(1);
+	}
+	&-item {
+		position: relative;
+		padding-left: ($contacts-icon-size + 10);
+		@include breakpoint($breakpoint-lg) {
+			padding-left: ($contacts-icon-size + 15);
+		}
+		&:not(:first-of-type) {
+			margin-top: 30px;
+		}
+		&--icon,
+		&--text {
+			display: inline-block;
+			vertical-align: top;
+		}
+		&--icon {
+			position: absolute;
+			left: 0; top: 0;
+			width: $contacts-icon-size;
+			height: $contacts-icon-size;
+			opacity: .5;
+			@include breakpoint($breakpoint-lg) {
+				width: $contacts-icon-size-lg;
+				height: $contacts-icon-size-lg;
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&--text {
+			font-size: $base-fosz;
+			font-weight: 300;
+			@include breakpoint($breakpoint-lg) {
+				font-size: $fosz-20;
+			}
+			span {
+				display: block;
+				&:not(:first-of-type) {
+					margin-top: 7px;
+				}
+			}
+		}
+	}
+	&-map {
+		border: 4px solid white;
+		margin-top: 25px;
+		@include breakpoint($breakpoint-lg) {
+			margin-top: 0;
+		}
+	}
+}
+
+.mail-us-btn {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 40px;
+	padding: 0 40px;
+	font-size: $base-fosz;
+	font-weight: 300;
+	border: 2px solid $base-blue;
+	text-decoration: none;
+	&:hover {
+		background-color: white;
+	}
+}
+
+@import 'remodal/remodal';
+@import 'remodal/remodal-default-theme';
+
+.modal {
+	&-wrapper {
+		width: $modal-width;
+		padding: 0;
+		@include breakpoint($breakpoint-sm) {
+			width: $modal-width-lg;
+		}
+	}
+	&-header,
+	&-body {
+		padding: 0 $modal-side-padding;
+	}
+	&-header {
+		position: relative;
+		background-color: $base-yellow;
+		text-align: left;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		@include stripes();
+		&--close {
+			@include v-align;
+			right: ($modal-side-padding - 12);
+			left: initial;
+			color: $dark-grey;
+			opacity: .5;
+			&:hover {
+				color: $base-red;
+				opacity: 1;
+			}
+		}
+		&--text {
+			font-size: $fosz-20;
+			font-weight: 500;
+			line-height: 1;
+		}
+	}
+	&-body {
+		background-color: #eceff1;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		form {
+			.form-input {
+				display: block;
+				width: 100%;
+				padding: 5px 12px;
+				font-family: inherit;
+				font-size: $base-fosz;
+				font-weight: 300;
+				box-shadow: none;
+				border-color: #b0bec5;
+				&:focus {
+					box-shadow: none;
+					border-color: $base-blue;
+				}
+				&:not(:first-of-type) {
+					margin-top: 15px;
+				}
+			}
+			input {
+				height: $modal-input-height;
+			}
+			textarea {
+				margin-top: 15px;
+				height: auto;
+			}
+		}
+		.submit-wrapper {
+			text-align: right;
+			margin-top: 15px;
+			input {
+				background-color: $base-blue;
+				border: 1px solid $base-blue;
+				color: white;
+				font-size: $base-fosz;
+				font-weight: 300;
+				height: 40px;
+				text-transform: uppercase;
+				padding: 0 40px;
+				@include stripes();
+				cursor: pointer;
+				box-shadow: 0 2px 10px -4px lighten(black, 10);
+				&:hover {
+					box-shadow: 0 2px 10px -5px lighten(black, 10);
+				}
+				&:active {
+					box-shadow: 0 2px 10px -7px lighten(black, 10);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,139 @@
+$susy: (
+	debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: overlay,
+    toggle: top right,
+  ),
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: 1/4,
+  output: float,
+  global-box-sizing: border-box,
+);
+
+.section {
+  width: 100%;
+  &-inner {
+    @include container(96%);
+    @include breakpoint($breakpoint-sm) {
+      @include container($container-sm);
+    }
+    @include breakpoint($breakpoint-md) {
+      @include container($container-md);
+    }
+    @include breakpoint($breakpoint-lg) {
+      @include container($container-lg);
+    }
+    @include breakpoint($breakpoint-xl) {
+      @include container($container-xl);
+    }
+  }
+}
+
+.main-header,
+.main-footer {
+  &--logo,
+  &--phones {
+    @include span(12);
+  }
+  &--logo {
+    @include breakpoint($breakpoint-md) {
+      @include span(5);
+    }
+  }
+  &--phones {
+    @include breakpoint($breakpoint-md) {
+      @include span(7);
+      @include last;
+    }
+  }
+}
+
+.order {
+  &-form {
+    @include container();
+    &--phone,
+    &--name {
+      @include span(12);
+      @include breakpoint($breakpoint-md) {
+        @include span(3);
+      }
+    }
+    &--name {
+      @include breakpoint($breakpoint-md) {
+        @include span(4);
+      }
+      @include breakpoint($breakpoint-lg) {
+        @include span(3);
+      }
+    }
+    &--phone {
+      @include breakpoint($breakpoint-md) {
+        @include push(1);
+      }
+      @include breakpoint($breakpoint-lg) {
+        @include push(2);
+      }
+    }
+    &--submit {
+      @include span(12);
+      @include breakpoint($breakpoint-md) {
+        @include span(3);
+      }
+      @include breakpoint($breakpoint-lg) {
+        @include span(2);
+      }
+    }
+  }
+}
+
+.park {
+  &-items {
+    @include container();
+  }
+  &-item {
+    @include span(12);
+    @include breakpoint($breakpoint-md) {
+      @include span(4);
+    }
+    &:last-of-type {
+      @include breakpoint($breakpoint-md) {
+        @include last;
+      }
+    }
+  }
+}
+
+.advantages {
+  &-items {
+    @include container();
+  }
+  &-item {
+    @include span(12);
+    @include breakpoint($breakpoint-md) {
+      @include span(4);
+    }
+    &:last-of-type {
+      @include breakpoint($breakpoint-md) {
+        @include last;
+      }
+    }
+  }
+}
+
+.contacts {
+  &-wrapper,
+  &-map {
+    @include span(12);
+    @include breakpoint($breakpoint-lg) {
+      @include span(6);
+    }
+  }
+  &-map {
+    @include breakpoint($breakpoint-lg) {
+      @include last;
+    }
+  }
+}

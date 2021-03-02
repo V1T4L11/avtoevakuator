@@ -1,0 +1,29 @@
+{
+  "name": "smile_test",
+  "version": "1.0.0",
+  "description": "test job for \"Smile Open Source Solutions\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://valera_osadchuk@bitbucket.org/valera_osadchuk/smile_test.git"
+  },
+  "keywords": [
+    "test",
+    "job",
+    "html",
+    "css",
+    "scss",
+    "gulp"
+  ],
+  "author": "valerio",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/valera_osadchuk/smile_test#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}

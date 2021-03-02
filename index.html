@@ -1,0 +1,254 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Avtoevakyator.com.ua</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/patch.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+      <symbol id="phone" viewBox="0 0 24 24">
+        <title>Mobile phone</title>
+        <path d="M16 0v3H8C7 3 6 4 6 5v17c0 1 1 2 2 2h8c1 0 2-1 2-2V0h-2zm-6 21H8v-1h2v1zm0-2H8v-1h2v1zm0-2H8v-1h2v1zm3 4h-2v-1h2v1zm0-2h-2v-1h2v1zm0-2h-2v-1h2v1zm3 4h-2v-1h2v1zm0-2h-2v-1h2v1zm0-2h-2v-1h2v1zm0-3H8V6h8v8z"/>
+      </symbol>
+      <symbol id="phone_blue" viewBox="0 0 24 24">
+        <title>Mobile phone blue</title>
+        <path fill="#42a5f5" d="M16 0v3H8C7 3 6 4 6 5v17c0 1 1 2 2 2h8c1 0 2-1 2-2V0h-2zm-6 21H8v-1h2v1zm0-2H8v-1h2v1zm0-2H8v-1h2v1zm3 4h-2v-1h2v1zm0-2h-2v-1h2v1zm0-2h-2v-1h2v1zm3 4h-2v-1h2v1zm0-2h-2v-1h2v1zm0-2h-2v-1h2v1zm0-3H8V6h8v8z"/>
+      </symbol>
+      <symbol id="email" viewBox="0 0 24 24">
+        <title>E-mail</title>
+        <path fill="#42a5f5" d="M0 3v18h24V3H0zm6.6 8L2 16.5V7.2L6.6 11zm-4-6h19L12 12.7 2.5 5zM8 12.2l3.8 3 3.8-3 5.6 6.8H2.7l5.5-6.8zm9.2-1.3L22 7v9.3L17.4 11z"/>
+      </symbol>
+      <symbol id="place" viewBox="0 0 24 24">
+        <title>Place</title>
+        <path fill="#42a5f5" d="M12 0C7.8 0 4 3.4 4 7.6c0 4.2 3.5 9.2 8 16.4 4.5-7.2 8-12.2 8-16.4C20 3.4 16.2 0 12 0zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
+      </symbol>
+      <symbol id="time" viewBox="0 0 24 24">
+        <title>Clock</title>
+        <path fill="#42a5f5" d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2zm0-2C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.8 12.5c.2 0 .2.3 0 .3l-6.5 1c-.7 0-1.3-.4-1.3-1.2l1-7.4c.2-.2.4-.2.5 0l1 6.2 5.3 1z"/>
+      </symbol>
+      <symbol id="evacuator_01" viewBox="3 22 94 64">
+        <title>evacuator_01</title>
+        <path fill="#42a5f5" d="M90 32c-.4-1.2-1.4-2-2.5-2H65c-1.4 0-2.5 1-2.5 2.5v25h-5V45c0-.8-.3-1.5-1-2l-25-20c-.4-.3-1-.5-1.5-.5H19.5c-.2 0-.3 0-.4.2 0 0-.2 0-.3.2h-.3l-.3.4-.2.5c0 .2 0 .4-.2.6V35c0 3 1.5 6 4 8 .7.5 1 1.2 1 2 0 1.3-1.2 2.5-2.5 2.5s-2.4-1-2.4-2.5c0-1.4-1-2.5-2.5-2.5s-2.4 1-2.4 2.5c0 4 3.4 7.5 7.5 7.5 4 0 7.6-3.4 7.6-7.5 0-2.3-1-4.4-2.8-6-.8-.5-2.2-2-2.2-4v-4l15 15v11.5h-30C6 57.5 5 58.5 5 60v15c0 1.4 1 2.5 2.5 2.5h7.8c1 4.3 5 7.5 9.7 7.5s8.6-3.2 9.7-7.5h28C64 81.8 68 85 72.7 85s8.5-3.2 9.6-7.5h10.3c1.4 0 2.5-1 2.5-2.5V52l-5-20zm-64-4.5h3l23.5 18.7v11.3h-10V45c0-.7-.3-1.3-.7-1.8L26 27.5zM25 80c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm37.5-7.5H34.7c-1-4.3-5-7.5-9.7-7.5s-8.6 3.2-9.7 7.5H10v-10h52.5v10zm15-37.5h8l3.8 15H77.5V35zm-5 45c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM90 72.5h-7.8c-1-4.3-5-7.5-9.7-7.5-1.8 0-3.5.5-5 1.4V35h5v17.5c0 1.4 1 2.5 2.5 2.5h15v17.5z"/>
+      </symbol>
+      <symbol id="evacuator_02" viewBox="4 24 92 62">
+        <title>evacuator_02</title>
+        <path fill="#42a5f5" d="M89.8 39c-.4-1-1.3-1.5-2.3-1.5H70c-1.4 0-2.5 1-2.5 2.5v17.5H58c.7-.7 1.2-1.6 1.6-2.5h3c1.3 0 2.4-1 2.4-2.5V40c0-1.4-1-2.5-2.5-2.5H56L44.3 25.7c-.5-.4-1-.7-1.8-.7h-20c-.7 0-1.3.3-1.8.7L11 35.4l-4.6 2.4C5.4 38.2 5 39 5 40v12.5C5 54 6 55 7.5 55h3c.3 1 .8 1.8 1.4 2.5H7.3C6 57.5 5 58.5 5 60v15c0 1.4 1 2.5 2.5 2.5h7.8c1 4.3 5 7.5 9.7 7.5s8.6-3.2 9.7-7.5h33C69 81.8 73 85 77.7 85s8.5-3.2 9.6-7.5h5.3c1.4 0 2.5-1 2.5-2.5V52.5v-1L90 39zM10.4 50H10v-8.5l3.6-1.8c.3 0 .5-.2.7-.4l9.2-9.3h18l11.7 11.8c.5.4 1 .7 1.8.7h5V50h-.4c-1-3-3.8-5-7-5s-6 2-7.2 5H24.6c-1-3-3.8-5-7-5s-6 2-7.2 5zM55 52.5c0 1.4-1 2.5-2.5 2.5S50 54 50 52.5s1-2.5 2.5-2.5 2.5 1 2.5 2.5zM45.4 55c.4 1 1 1.8 1.5 2.5H23c.7-.7 1.2-1.6 1.6-2.5h20.8zM20 52.5c0 1.4-1 2.5-2.5 2.5S15 54 15 52.5s1-2.5 2.5-2.5 2.5 1 2.5 2.5zM25 80c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm42.5-7.5H34.7c-1-4.3-5-7.5-9.7-7.5s-8.6 3.2-9.7 7.5H10v-10h57.5v10zm15-30h3.3l4 10h-7.3v-10zm-5 37.5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM90 72.5h-2.8c-1-4.3-5-7.5-9.7-7.5-1.8 0-3.5.5-5 1.4v-24h5V55c0 1.4 1 2.5 2.5 2.5h10v15z"/><path fill="#42a5f5" d="M35 42.5h10c1.4 0 2.5-1 2.5-2.5 0-.8-.3-1.5-1-2L42 33.3c-.5-.4-1-.7-1.8-.7h-5c-1.4 0-2.5 1-2.5 2.5v5c0 1.5 1 2.6 2.5 2.6zm-15 0h7.5c1.4 0 2.5-1 2.5-2.5v-5c0-1.4-1-2.5-2.5-2.5H25c-.7 0-1.3.3-1.8.7l-5 5c-.7.7-1 1.8-.5 2.8.4 1 1.3 1.5 2.3 1.5z"/>
+      </symbol>
+      <symbol id="evacuator_03" viewBox="5 7 78 41">
+        <title>evacuator_03</title>
+        <path fill="#42a5f5" d="M70 35.2c-3 0-5.7 2.6-5.7 5.8 0 3.2 2.6 5.8 5.8 5.8s6-2.6 6-5.8c0-3.2-2.6-5.8-6-5.8zm0 8.8c-1.6 0-3-1.3-3-3s1.4-3 3-3 3 1.3 3 3-1.2 3-3 3zm-33.7-8.8c-3.2 0-5.8 2.6-5.8 5.8 0 3.2 2.6 5.8 5.8 5.8 3.2 0 5.8-2.6 5.8-5.8 0-3.2-2.4-5.8-5.6-5.8zm0 8.8c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.6 0 3 1.3 3 3s-1.4 3-3 3zm-15-8.8c-3.2 0-5.8 2.6-5.8 5.8 0 3.2 2.6 5.8 5.8 5.8 3.2 0 5.8-2.6 5.8-5.8 0-3.2-2.4-5.8-5.6-5.8zm0 8.8c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/><path fill="#42a5f5" d="M73 9H54.7v23.5H12v7.7h2.6c.2-3.5 3-6.3 6.7-6.3 3.5 0 6.4 2.6 6.6 6h1.4c.2-3.4 3-6.2 6.7-6.2s6.6 2.7 6.8 6.2h20.4c.2-3.5 3.2-6.3 6.7-6.3 3.6 0 6.5 2.7 6.7 6.2h5V23c0-5.6-8.8-14-8.8-14zM61 24.5h-3.6v-13H61v13zm17 0H63.6v-13h8c0 .2 6.4 5.5 6.4 9.6v3.5z"/><path fill="#42a5f5" d="M42.5 13.6c1-3.3 8.6-2.3 8.6-2.3 2.7 0 1.8-1.3 1.8-1.3-4.2-2.4-12.2-2-15-.8-2.7 1.3-2.6 4-2.6 4l7.5.4zm-.2 12C43.3 29 51 28 51 28c2.4-.2 1.6 1 1.6 1-4.4 2.6-12.3 2.5-15 1.2-2.7-1.2-2.6-4-2.6-4l7.3-.5zm-18 1.4l20-2 .4-.6 4-1c.5-1 .7-1.8.8-2.7H46v-2.3h3.5c0-1.6-.7-2.7-.7-2.7l-4-.8-.3-.8-23.2-1.7c-7.5-.2-16 7.4-16 7.4 8 8.2 19 7 19 7zM17 19.7c0-2.3 2-4 4.2-4 2.3-.2 4 1.7 4 4s-1.8 4-4 4.2c-2.4 0-4.2-2-4.2-4.3zm32.5 1c4.8-.3 4-1.4 4-1.4 0-.5-2-.8-4-.8v2.2z"/>
+      </symbol>
+      <symbol id="steeringwheel" viewBox="0 0 64 64">
+        <title>steeringwheel</title>
+        <circle cx="32" cy="32" fill="#77B3D4" r="32"/><path d="M51 38c0-2 1-3.6 1.2-5.3 0-.6 0-1.2.2-1.8H52s-12-2-20-2-20 2-20 2c-1.2 0 0-2-1-2 0 1 .2 2.2.5 3.3.5 2 1.2 3.7 1.6 5.6l9.2-1c3.2 0 5.8 2.6 5.8 5.8v8.6c2.6 0 5.5.4 8.2.2l-.2-1.4v-7.4c0-3.2 2.6-5.8 5.8-5.8l9 1z" fill="#231F20" opacity=".2"/><path d="M12 28c-1.2 0 0-2-1-2-.7 1.8-1 4-1 6v2.2c.6 0 1.2.8 1.8.8l10.4-1c3.2 0 5.8 2.6 5.8 5.8v7.4c0 2.5-1.5 4.6-3.7 5.4 2.4 1 5 1.4 7.7 1.4s5.3-.5 7.7-1.4c-2.2-.8-3.7-3-3.7-5.4v-7.4c0-3.2 2.6-5.8 5.8-5.8l10.4 1c.6 0 1.2-1 1.7-.8V32c0-2-.3-4.2-1-6-1 0 .2 2-1 2 0 0-12-2-20-2s-20 2-20 2z" fill="#4F5D73"/><circle cx="32" cy="33" fill="#231F20" opacity=".2" r="3"/><circle cx="32" cy="32" fill="#76C2AF" r="3"/><path d="M32 16c9.7 0 17.5 7.8 17.5 17.5S41.5 51 32 51s-17.5-7.8-17.5-17.5S22.5 16 32 16m0-4c-12.2 0-22 9.8-22 22s9.8 22 22 22 22-9.8 22-22-10-22-22-22z" fill="#231F20" opacity=".2"/><path d="M32 14c10 0 18 8 18 18s-8 18-18 18-18-8-18-18 8-18 18-18m0-4c-12.2 0-22 9.8-22 22s9.8 22 22 22 22-9.8 22-22-10-22-22-22z" fill="#4F5D73"/>
+      </symbol>
+      <symbol id="clock" viewBox="0 0 64 64">
+        <title>clock</title>
+        <circle cx="32" cy="32" fill="#E0E0D1" r="32"/><path d="M32 16c10 0 18 8 18 18s-8 18-18 18-18-8-18-18 8-18 18-18zm0-4c-12.2 0-22 9.8-22 22s9.8 22 22 22 22-9.8 22-22-10-22-22-22z" fill="#231F20" opacity=".2"/><path d="M32 14c10 0 18 8 18 18s-8 18-18 18-18-8-18-18 8-18 18-18m0-4c-12.2 0-22 9.8-22 22s9.8 22 22 22 22-9.8 22-22-10-22-22-22z" fill="#C75C5C"/><path d="M40 44c-.5 0-1-.2-1.4-.6L30 34.8V26c0-1 1-2 2-2s2 1 2 2v7.2l7.4 7.4c.8.8.8 2 0 2.8-.4.4-1 .6-1.4.6z" fill="#231F20" opacity=".2"/><path d="M40 42c-.5 0-1-.2-1.4-.6L30 32.8V24c0-1 1-2 2-2s2 1 2 2v7.2l7.4 7.4c.8.8.8 2 0 2.8-.4.4-1 .6-1.4.6z" fill="#4F5D73"/>
+      </symbol>
+      <symbol id="tools" viewBox="0 0 64 64">
+        <title>tools</title>
+        <circle cx="32" cy="32" fill="#76C2AF" r="32"/><path d="M50 46.2l-14.2-14c-1-1-2.5-1.5-3.8-1l-8-8-3.2-6-6-3L12 17l3 6 6 3 8 8c-.3 1.2 0 2.7 1 3.8l14.2 14c1.6 1.7 4 1.7 5.7 0 1.5-1.5 1.5-4 0-5.6z" fill="#231F20" opacity=".2"/><path fill="#4F5D73" d="M34.5 37.3l-16-16 2.8-2.7 16 16"/><path d="M50 50c-1.7 1.5-4.2 1.5-5.8 0l-14-14.2c-1.7-1.6-1.7-4 0-5.7 1.5-1.5 4-1.5 5.6 0l14 14.2c1.7 1.6 1.7 4 0 5.7z" fill="#F5CF87"/><path d="M53.3 18.4l-6.5 6.4c-1.5 1.6-4 1.6-5.6 0-1.6-1.5-1.6-4 0-5.6l6.4-6.5c-1-.4-2.3-.7-3.6-.7-5.5 0-10 4.5-10 10 0 1.3.3 2.5.7 3.6l-11 11c-1.2-.3-2.4-.6-3.7-.6-5.5 0-10 4.5-10 10 0 1.3.3 2.5.7 3.6l6.5-6.4c1.5-1.6 4-1.6 5.6 0 1.6 1.5 1.6 4 0 5.6l-6.4 6.5c1 .4 2.3.7 3.6.7 5.5 0 10-4.5 10-10 0-1.3-.3-2.5-.7-3.6l11-11c1.2.3 2.4.6 3.7.6 5.5 0 10-4.5 10-10 0-1.3-.3-2.5-.7-3.6z" fill="#231F20" opacity=".2"/><path fill="#FFF" d="M23 35.3l12.2-12 5.6 5.5-12 12z"/><path fill="#4F5D73" d="M21 24l-6-3-3-6 3-3 5.8 3.2 3 6"/><path d="M46.8 22.8c-1.5 1.6-4 1.6-5.6 0-1.6-1.5-1.6-4 0-5.6l6.4-6.5c-1-.4-2.3-.7-3.6-.7-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10c0-1.3-.3-2.5-.7-3.6l-6.5 6.4zM17.2 41.2c1.5-1.6 4-1.6 5.6 0 1.6 1.5 1.6 4 0 5.6l-6.4 6.5c1 .4 2.3.7 3.6.7 5.5 0 10-4.5 10-10s-4.5-10-10-10-10 4.5-10 10c0 1.3.3 2.5.7 3.6l6.5-6.4z" fill="#FFF"/>
+      </symbol>
+    </svg>
+
+    <header class="section main-header">
+      <div class="section-inner">
+        <div class="main-header--logo">
+          <a href="#">
+            <img class="logo-image" src="img/main-logo.png" alt="Логотип avtoevakyator.com.ua">
+            <h4 class="logo-text">avtoevakyator.com.ua<small>&laquo;Мы никогда не отказываем&raquo;</small></h4>
+          </a>
+        </div>
+        <div class="main-header--phones">
+          <div class="phone-item">
+            <span class="svg-wrapper"><svg><use xlink:href="#phone"></use></svg></span>
+            (097) 578-71-23
+          </div>
+          <div class="phone-item">
+            <span class="svg-wrapper"><svg><use xlink:href="#phone"></use></svg></span>
+            (097) 578-71-23
+          </div>
+        </div>
+      </div>
+    </header> <!-- /.main-header -->
+
+    <section class="section hero">
+      <div class="section-inner">
+        <h1 class="hero-title">Эвакуация (перевозка) автомобилей, грузоперевозки на открытых платформах, перевозки крупногабаритных грузов.</h1>
+        <h4 class="hero-userscounter">Нашими клиентами стали уже более <span class="text-red">3578</span> человек</h4>
+      </div>
+    </section> <!-- /.hero -->
+
+    <section class="section order" id="callbackForm">
+      <div class="section-inner">
+        <h4 class="order-title">Закажите обратный звонок прямо сейчас</h4>
+        <form action="" class="order-form">
+          <input type="text" class="form-input order-form--phone" placeholder="№ телефона">
+          <input type="text" class="form-input order-form--name" placeholder="Имя">
+          <input type="submit" value="ЗАКАЗАТЬ" class="form-input order-form--submit">
+        </form>
+        <h4 class="order-title">или заполните <a href="#" id="extended-order">форму&nbsp;заказа&nbsp;услуги</a>.</h4>
+      </div>
+    </section> <!-- /.order -->
+
+    <section class="section section__content white-bg services">
+      <div class="section-inner">
+        <h2 class="section-title"><span>Наши услуги</span></h2>
+        <div class="services-item">
+          <div class="services-item--icon"><svg><use xlink:href="#evacuator_01"></use></svg></div>
+          <div class="services-item--text">Эвакуация (перевозка) автомобилей, с/х техники, спецтехники.</div>
+        </div>
+        <div class="services-item">
+          <div class="services-item--icon"><svg><use xlink:href="#evacuator_02"></use></svg></div>
+          <div class="services-item--text">Грузоперевозки на открытых платформах.</div>
+        </div>
+        <div class="services-item">
+          <div class="services-item--icon"><svg><use xlink:href="#evacuator_03"></use></svg></div>
+          <div class="services-item--text">Перевозки крупногабаритных грузов.</div>
+        </div>
+        <div class="cta-wrapper"><a href="#callbackForm" class="cta-button">Заказать обратный звонок</a></div>
+      </div>
+    </section> <!-- /.services -->
+
+    <section class="section section__content grey-bg park">
+      <div class="section-inner">
+        <h2 class="section-title"><span>Наш автопарк</span></h2>
+        <div class="park-items">
+          <div class="park-item">
+            <div class="park-item--image"><img src="img/evacuator_01.jpg" alt=""></div>
+            <div class="park-item--text">Эвакуатор с лебедкой</div>
+          </div>
+          <div class="park-item">
+            <div class="park-item--image"><img src="img/evacuator_02.jpg" alt=""></div>
+            <div class="park-item--text">Эвакуатор со сдвижной платформой</div>
+          </div>
+          <div class="park-item">
+            <div class="park-item--image"><img src="img/evacuator_03.jpg" alt=""></div>
+            <div class="park-item--text">Эвакуатор с краном-манипулятором</div>
+          </div>
+        </div>
+        <div class="cta-wrapper"><a href="#callbackForm" class="cta-button">Заказать обратный звонок</a></div>
+      </div>
+    </section> <!-- /.park -->
+
+    <section class="section section__content white-bg advantages">
+      <div class="section-inner">
+        <h2 class="section-title"><span>Наши преимущества</span></h2>
+        <div class="advantages-items">
+          <div class="advantages-item">
+            <div class="advantages-item--icon"><svg><use xlink:href="#steeringwheel"></use></svg></div>
+            <div class="advantages-item--text">
+              <strong>Наш автопарк</strong>
+              Автопарк оснащен спецтехникой со сдвижной платформой, также в нашем автопарке есть модели с манипулятором - для более сложных работ.
+            </div>
+          </div>
+          <div class="advantages-item">
+            <div class="advantages-item--icon"><svg><use xlink:href="#clock"></use></svg></div>
+            <div class="advantages-item--text">
+              <strong>Работаем 24 часа в сутки</strong>
+              Мы работаем в круглосуточном режиме в Хмельницкой области, а также совершаем междугородние и международные перевозки.
+            </div>
+          </div>
+          <div class="advantages-item">
+            <div class="advantages-item--icon"><svg><use xlink:href="#tools"></use></svg></div>
+            <div class="advantages-item--text">
+              <strong>Техническая помощь</strong>
+              Наш эвакуатор не только увезет сломаный автомобиль, попавший в ДТП, но и решит еще массу возможных проблем совсем не дорого.
+            </div>
+          </div>
+        </div>
+        <div class="cta-wrapper"><a href="#callbackForm" class="cta-button">Заказать обратный звонок</a></div>
+      </div>
+    </section> <!-- /.advantages -->
+
+    <section class="section section__content grey-bg contacts">
+      <div class="section-inner">
+        <h2 class="section-title"><span>Контакты</span></h2>
+        <div class="contacts-wrapper">
+          <div class="contacts-item">
+            <div class="contacts-item--icon"><svg><use xlink:href="#phone_blue"></use></svg></div>
+            <div class="contacts-item--text">
+              <span>(098) 439-44-11</span>
+              <span>(099) 439-44-11</span>
+            </div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item--icon"><svg><use xlink:href="#place"></use></svg></div>
+            <div class="contacts-item--text">Хмельницкий, ул. Озерная 16/1</div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item--icon"><svg><use xlink:href="#email"></use></svg></div>
+            <div class="contacts-item--text"><a href="mailto:info@avtoevakyator.com.ua" "email me">info@avtoevakyator.com.ua</a></div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item--icon"><svg><use xlink:href="#time"></use></svg></div>
+            <div class="contacts-item--text">заказы принимаются круглосуточно, без выходных</div>
+          </div>
+          <div class="contacts-item">
+            <a href="#writeUs_modal" class="mail-us-btn">Написать нам</a>
+          </div>
+        </div>
+        <div class="contacts-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.2912544852165!2d27.009373315970336!3d49.44121197934892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473207a69547786b%3A0x79e88c126414c59a!2sOzerna+St%2C+16%2F1%2C+Khmel&#39;nyts&#39;kyi%2C+Khmel&#39;nyts&#39;ka+oblast!5e0!3m2!1sen!2sua!4v1490281941194" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+        <div class="clearfix"></div>
+        <div class="cta-wrapper"><a href="#callbackForm" class="cta-button">Заказать обратный звонок</a></div>
+      </div>
+    </section> <!-- /.contacts -->
+
+    <footer class="section main-footer">
+      <div class="section-inner">
+        <div class="main-footer--logo">
+          <a href="#">
+            <img class="logo-image" src="img/main-logo.png" alt="Логотип avtoevakyator.com.ua">
+            <h4 class="logo-text">
+              avtoevakyator.com.ua
+              <small>&laquo;Мы никогда не отказываем&raquo;</small>
+              <span class="copyright">avtoevakyator.com.ua &copy; 2017</span>
+            </h4>
+          </a>
+        </div>
+        <div class="main-footer--phones">
+          <div class="phone-item">
+            <span class="svg-wrapper"><svg><use xlink:href="#phone"></use></svg></span>
+            (097) 578-71-23
+          </div>
+          <div class="phone-item">
+            <span class="svg-wrapper"><svg><use xlink:href="#phone"></use></svg></span>
+            (097) 578-71-23
+          </div>
+        </div>
+      </div>
+    </footer> <!-- /.main-footer -->
+
+    <div class="remodal modal-wrapper" data-remodal-id="writeUs_modal">
+      <div class="modal-header">
+        <button data-remodal-action="close" class="remodal-close modal-header--close"></button>
+        <h1 class="modal-header--text">Форма обратной связи</h1>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <input class="form-input" type="text" placeholder="Имя">
+          <input class="form-input" type="text" placeholder="E-mail">
+          <input class="form-input" type="text" placeholder="Телефон">
+          <textarea class="form-input" name="" id="" rows="3" placeholder="Сообщение"></textarea>
+          <div class="submit-wrapper"><input type="submit" value="Отправить"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/remodal.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

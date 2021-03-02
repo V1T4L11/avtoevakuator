@@ -1,0 +1,70 @@
+/********************************
+********** Breakpoints **********
+********************************/
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+// @include breakpoint($breakpoint-sm) {}
+
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+
+/********************************
+************* Colors ************
+********************************/
+$dark-grey:		#263238;
+$base-grey:		#455a64;
+$base-yellow:	#ffc107;
+$base-red:		#ff3d00;
+$base-blue:		#1E88E5;
+
+$main-header-bgc: $base-grey;
+$hero-bgc: #607d8b;
+$link-color: #0277bd;
+
+/********************************
+*********** Font sizes **********
+********************************/
+$base-fosz: 18px;
+$fosz-20: $base-fosz * 1.11;
+$fosz-25: $base-fosz * 1.38;
+$fosz-30: $base-fosz * 1.66;
+$fosz-40: $base-fosz * 2.22;
+$fosz-48: $base-fosz * 2.66;
+
+/********************************
+********** Dimmensions **********
+********************************/
+$section-padding:				25px;
+$section-padding-lg:		75px;
+$section-title-mbot:		25px;
+$section-title-mbot-lg:	50px;
+
+$header-height:					60px;
+$header-height-lg:			70px;
+$footer-height:					100px;
+$main-logo-height:			$header-height;
+$main-logo-height-lg:		100px;
+$input-height:					46px;
+$cta-button-height:			50px;
+$services-icon-size:		45px;
+$services-icon-size-lg:	65px;
+
+$contacts-icon-size:		24px;
+$contacts-icon-size-lg: 32px;
+
+$modal-width:						96%;
+$modal-width-lg:				420px;
+$modal-side-padding:		30px;
+$modal-input-height:		32px;
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+@include breakpoint($breakpoint-lg) {
+}
